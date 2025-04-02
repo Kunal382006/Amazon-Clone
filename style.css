@@ -233,3 +233,23 @@ ul p{
     font-size: 0.85rem;
     
 }
+/* For small screens like phones */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-grid {
+        grid-template-columns: 1fr; /* Single column for mobile */
+    }
+    .sidebar {
+        display: none; /* Hide sidebar on smaller screens */
+    }
+}
+
+/* For tablets */
+@media screen and (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two products in a row */
+    }
+}
